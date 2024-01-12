@@ -18,7 +18,7 @@ class Livro:
         for livro in Livro.livros:
             if livro._titulo == nome_livro_emprestar:
                 livro._disponivel = False
-        print('Livro emprestado com sucesso!')
+        print('\nLivro emprestado com sucesso!')
 
     @staticmethod
     def verificar_disponibilidade():
