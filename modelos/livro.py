@@ -11,10 +11,14 @@ class Livro:
         Livro.livros.append(self)
 
     def __str__(self):
-        return f'{self._titulo} | {self._autor} | {self._ano_publicacao}'
+        return f'{self._titulo} | {self._autor} | {self._ano_publicacao} | Disponível' if self._disponivel == True else f'{self._titulo} | {self._autor} | {self._ano_publicacao} | Indisponível'
 
-    def emprestar(self):
-        self._disponivel = False
+    def emprestar():
+        nome_livro_emprestar = input('Digite o nome do livro para emprestar: ')
+        for livro in Livro.livros:
+            if livro._titulo == nome_livro_emprestar:
+                livro._disponivel = False
+        print('Livro emprestado com sucesso!')
 
     @staticmethod
     def verificar_disponibilidade():

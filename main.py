@@ -25,7 +25,9 @@ def escolher_opcao():
                 Livro.verificar_disponibilidade()
                 voltar_ao_menu()
             case (3):
-                pass
+                exibir_titulo('Exibir livros disponíveis')
+                Livro.emprestar()
+                voltar_ao_menu()
             case (4):
                 exibir_titulo('Exibir todos os livros')
                 Livro.listar_todos_livros()
