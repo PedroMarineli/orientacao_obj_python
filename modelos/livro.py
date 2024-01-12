@@ -1,11 +1,11 @@
 class Livro:
     livros = []
-
+    
     def __init__(self, titulo, autor, ano_publicacao):
 
         self._titulo = titulo.title()
         self._autor = autor.title()
-        self._ano_publicacao = ano_publicacao
+        self._ano_publicacao = str(ano_publicacao)
         self._disponivel = True
 
         Livro.livros.append(self)
@@ -17,10 +17,11 @@ class Livro:
         self._disponivel = False
 
     @staticmethod
-    def verificar_disponibilidade(ano_publicacao):
-        print(f'\nLivros disponiníveis publicados em: {ano_publicacao}')
+    def verificar_disponibilidade():
+        ano_publicacao_livro = input("Digite o ano de publicação: ")
+        print(f'\nLivros disponiníveis publicados em: {ano_publicacao_livro}\n')
         for livro in Livro.livros:
-            if livro._disponivel == True and livro._ano_publicacao == ano_publicacao:
+            if livro._disponivel == True and livro._ano_publicacao == ano_publicacao_livro:
                 print(f'-> {livro}') 
 
     @staticmethod

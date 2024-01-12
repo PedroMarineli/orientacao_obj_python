@@ -1,4 +1,5 @@
 import os
+import biblioteca
 from modelos.livro import Livro
 
 def mostrar_opcoes():
@@ -20,7 +21,9 @@ def escolher_opcao():
                 Livro.adicionar_livro()
                 voltar_ao_menu()
             case (2):
-                pass
+                exibir_titulo('Exibir livros disponíveis')
+                Livro.verificar_disponibilidade()
+                voltar_ao_menu()
             case (3):
                 pass
             case (4):
