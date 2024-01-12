@@ -29,6 +29,15 @@ class Livro:
         for livro in Livro.livros:
             print(f'-> {livro}')
 
+    def adicionar_livro():
+        nome_livro = input('Digite o nome do livro: ')
+        autor_livro = input('Digite o/a autor(a) do livro: ')
+        ano_livro = int(input('Digite o ano de publicação: '))
+
+        livro = Livro(f'{nome_livro}', f'{autor_livro}', ano_livro)
+
+        print('\nLivro adicionado com sucesso!')
+
         
 
     
