@@ -23,5 +23,12 @@ class Livro:
             if livro._disponivel == True and livro._ano_publicacao == ano_publicacao:
                 print(f'-> {livro}') 
 
+    @staticmethod
+    def listar_todos_livros():
+        print('Lista de todos os livros:\n')
+        for livro in Livro.livros:
+            print(f'-> {livro}')
+
+        
 
     
