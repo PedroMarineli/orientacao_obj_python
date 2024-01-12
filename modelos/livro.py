@@ -16,11 +16,11 @@ class Livro:
     def emprestar(self):
         self._disponivel = False
 
-livro_aventura = Livro('Romeu e Julieta', 'Pablo', 1897)
-livro_romance = Livro('Harry Potter', 'Joana', 2001)
+    @staticmethod
+    def verificar_disponibilidade(ano_publicacao):
+        print(f'\nLivros disponiníveis publicados em: {ano_publicacao}')
+        for livro in Livro.livros:
+            if livro._disponivel == True and livro._ano_publicacao == ano_publicacao:
+                print(f'-> {livro}') 
 
-livro_aventura.emprestar()
-
-print(f'{livro_aventura} {livro_aventura._disponivel}')
-print(f'{livro_romance} {livro_romance._disponivel}')
     
